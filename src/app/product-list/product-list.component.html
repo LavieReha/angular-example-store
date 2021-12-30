@@ -14,11 +14,18 @@
     <p *ngIf="product.description">
         Description: {{ product.description }}
     </p>
+
     <!-- The button's click event is bound to the share() method in product-list.component.ts. -->
     <!-- Event binding uses a set of parentheses, ( ), around the event, as in the (click) event on the <button> element. -->
     <button (click)="share()">
         Share
     </button>
+
+    <!-- The child component -->
+    <!-- The current product is passed as input to the component using property binding. -->
+    <app-product-alerts
+        [product]="product">
+    </app-product-alerts>
 </div>
 <!-- 
 Copyright Google LLC. All Rights Reserved.

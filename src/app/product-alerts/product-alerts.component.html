@@ -1,0 +1,5 @@
+<!-- The product alert component takes a product as input from the product list (in the .ts file). With that input, it shows or hides 
+    the Notify Me button, based on the price of the product.-->
+<p *ngIf="product && product.price > 700">
+    <button>Notify Me</button>
+</p>
