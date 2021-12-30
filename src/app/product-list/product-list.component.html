@@ -5,6 +5,7 @@
 <div *ngFor="let product of products">
     <h3>
         <!-- Property binding [ ] lets you use the property value in a template expression. -->
+        <!-- title is an attribute of the anchor element: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes -->
         <a [title]="product.name + ' details'">
             <!--  Interpolation {{ }} lets you render the property value as text. -->
             {{ product.name }}
