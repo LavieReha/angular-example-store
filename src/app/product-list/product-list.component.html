@@ -1,6 +1,24 @@
 <h2>Products</h2>
 
-
+<!-- Structural directives shape or reshape the DOM's structure, by adding, removing, and manipulating elements. -->
+<!-- *ngFor is a structural directive that repeats the div-element for each product in the list. -->
+<div *ngFor="let product of products">
+    <h3>
+        <!-- Property binding [ ] lets you use the property value in a template expression. -->
+        <a [title]="product.name + ' details'">
+            <!--  Interpolation {{ }} lets you render the property value as text. -->
+            {{ product.name }}
+        </a>
+    </h3>
+    <p *ngIf="product.description">
+        Description: {{ product.description }}
+    </p>
+    <!-- The button's click event is bound to the share() method in product-list.component.ts. -->
+    <!-- Event binding uses a set of parentheses, ( ), around the event, as in the (click) event on the <button> element. -->
+    <button (click)="share()">
+        Share
+    </button>
+</div>
 <!-- 
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
