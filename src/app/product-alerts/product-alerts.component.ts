@@ -1,5 +1,5 @@
 // For sharing data between a parent and child components import and use Input.
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from '../products';
 
 // @Component is a decorator.
@@ -10,15 +10,12 @@ import { Product } from '../products';
 })
 
 // The keyword export allows other modules to import this module/class (a TypeScript/ES6 feature).
-export class ProductAlertsComponent implements OnInit {
 
   // A property named product is defined with an @Input() decorator.
   // The @Input() decorator indicates that the property value passes in 
   // from the component's parent, ProductListComponent.
-  @Input() product!: Product;
-  constructor() { }
-
-  ngOnInit(): void {
+  // The @Output() allows the ProductAlertsComponent to emit an event when the value of the notify property changes.
+  export class ProductAlertsComponent {
+    @Input() product: Product | undefined;
+    @Output() notify = new EventEmitter();
   }
-
-}

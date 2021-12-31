@@ -9,9 +9,14 @@ import { products } from '../products';
 })
 export class ProductListComponent {
   products = products;
-
+  // Define the behavior that happens when the user clicks one of the buttons.
+  // The parent, ProductListComponent — not the ProductAlertsComponent — acts when the child raises the event.
   share() {
     window.alert('The product has been shared!');
+  }
+
+  onNotify() {
+    window.alert('You will be notified when the product goes on sale');
   }
 }
 

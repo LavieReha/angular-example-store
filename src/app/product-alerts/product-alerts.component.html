@@ -1,5 +1,8 @@
 <!-- The product alert component takes a product as input from the product list (in the .ts file). With that input, it shows or hides 
     the Notify Me button, based on the price of the product.-->
+<!-- The Notify Me button got an event binding to call the notify.emit() method. 
+    emit() is a method provided by the EventEmitter class: https://angular.io/api/core/EventEmitter -->
+    
 <p *ngIf="product && product.price > 700">
-    <button>Notify Me</button>
+    <button (click)="notify.emit()">Notify Me</button>
 </p>
