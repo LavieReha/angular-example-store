@@ -1,5 +1,6 @@
 // For sharing data between a parent and child components import and use Input.
 import { Component, OnInit, Input } from '@angular/core';
+// Imports the datatype Product that is defined as interface in products.ts.
 import { Product } from '../products';
 
 // @Component is a decorator.
