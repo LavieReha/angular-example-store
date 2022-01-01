@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+// Imports the data from products object defined in products.ts.
 import { products } from '../products';
 
 @Component({
