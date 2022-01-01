@@ -6,7 +6,12 @@
     <h3>
         <!-- Property binding [ ] lets you use the property value in a template expression. -->
         <!-- title is an attribute of the anchor element: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes -->
-        <a [title]="product.name + ' details'">
+        <!-- The RouterLink directive helps you customize the anchor element. 
+            In this case, the route, or URL, contains one fixed segment, /products. 
+            The final segment is variable, inserting the id property of the current product. -->
+        <a 
+            [title]="product.name + ' details'"
+            [routerLink]="['/products', product.id]">
             <!--  Interpolation {{ }} lets you render the property value as text. -->
             {{ product.name }}
         </a>
