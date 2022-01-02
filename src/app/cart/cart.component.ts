@@ -13,6 +13,4 @@ export class CartComponent {
   constructor(
     private cartService: CartService
   ) { }
-
-
 }

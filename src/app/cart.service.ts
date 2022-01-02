@@ -7,7 +7,13 @@ import { Product } from './products';
   providedIn: 'root'
 })
 export class CartService {
+
   items: Product[] = [];
+
+  /*
+  * Inject the HttpClient service into your service so your application can fetch data and 
+  * interact with external APIs and resources.
+  */
   constructor(
     private http: HttpClient
   ) { }
